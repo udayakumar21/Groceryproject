@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title></title>
+               <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+<script src="/__/firebase/7.15.0/firebase-auth.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="Logsigncss.css">
+        <link rel="stylesheet" type="text/css" href="design.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+          .link{
+            font-weight: bold;
+            color: white;
+          }
+        </style>
+
+    </head>
+    
+    <body class="bg" >
+      
+      <div id="login_div" class="main-div">
+        <header>
+            <nav>
+                <div class="row1 clearfix">
+                    
+                    <ul class="main-nav" id="check-class"> </ul>
+                        
+                    
+                </div>
+            </nav>
+
+
+            <div class="container-fluid bg">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+            <div class="form-container">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text" >We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div></br>
+                
+                <button class="btn btn-primary" onclick="login()" >submit</button>
+             <br> </br>
+                
+                <a class="link" href="reset.html" > Forgot_Password? </a><br></br>
+
+                <a class="link" href="singup.html" >Sign_Up</a>
+              
+            </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12"></div>
+              </div>
+            
+            </div>
+        
+
+         </header>
+</div>
+        <script type="text/javascript">
+              function slideshow()
+              {
+                  var x=document.getElementById('check-class');
+                  if(x.style.display=="none"){
+                      x.style.display="block";
+                  }
+                  else{
+                      x.style.display="none";
+                  }
+              }
+
+        </script>
+
+
+ 
+<script>
+ // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAN_hZwjs6nprEfL7dN5vN0xTTJGyN-eYo",
+    authDomain: "grocery-5a4ef.firebaseapp.com",
+    databaseURL: "https://grocery-5a4ef-default-rtdb.firebaseio.com",
+    projectId: "grocery-5a4ef",
+    storageBucket: "grocery-5a4ef.appspot.com",
+    messagingSenderId: "107231341618",
+    appId: "1:107231341618:web:6ae138fed374929d4f602b",
+    measurementId: "G-7QCPF69ZHJ"
+  };
+  // Initialize Firebase
+   
+  
+  firebase.initializeApp(firebaseConfig);
+
+
+  firebase.analytics();
+  
+  function login(){
+
+    var userEmail = document.getElementById("exampleInputEmail1").value;
+    var userPass = document.getElementById("exampleInputPassword1").value;
+  
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(
+    function(){
+        window.location.href="home.html";
+        }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+  
+      window.alert("Error : " + errorMessage);
+  
+      // ...
+    });
+  
+}
+</script>
+
+<script src="login.js"></script>
+
+
+
+    </body>
+
+</html> 

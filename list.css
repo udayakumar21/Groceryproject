@@ -1,0 +1,321 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 9 Apr, 2021, 1:23:25 PM
+    Author     : Santosh Mokashi
+*/
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 29 Mar, 2021, 8:07:35 PM
+    Author     : Santosh Mokashi
+*/
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 12 Feb, 2020, 10:50:08 PM
+    Author     : user
+*/
+
+.menu-body {
+	text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    color: rgb(92, 92, 92);
+	left:-300px;
+	
+	
+}
+
+.menu-section {
+    margin-bottom: 80px;
+}
+
+.menu-section-title {
+    font-family: georgia;
+    font-size: 50px;
+    display: block;
+    font-weight: normal;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.menu-item {
+    margin: 35px 0;
+    font-size: 16px;
+	text-align:left
+}
+
+.menu-item1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+	text-align:left;
+	margin: 35px 0;
+}
+
+.menu-item-name {
+    width:400px;
+  	
+    overflow: hidden;
+
+	position:relative;
+	top:-9px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	right:2%;
+	
+}
+
+.checkout-cart__item-unit {
+    color: #999;
+    padding-top: 4px;
+	right:30%;
+	position:relative;
+	top:-5px;
+}
+
+.menu-item-price {
+     padding-top: 4px;
+    right:30%;
+	position:relative;
+	top:-5px;
+}
+
+.box {
+    position: relative;
+    float: right;
+    transform: translate(-50%, -50%);
+    left: -25%;
+    display: inline-block;
+    margin-top: -22px;
+    box-sizing: border-box;
+}
+
+.box1 {
+    position: relative;
+    float: right;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: inline-block;
+    margin-top: -32px;
+    margin-right: 200px;
+	padding:2px 4px 2px 4px;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background:black;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 8px 4px;
+	margin-bottom:3px;
+	
+}
+
+nav .icon {
+    font-size: 25px;
+    font-weight: 800;
+    font-family:lucida handwriting;
+    color:white;
+    cursor: pointer;
+}
+
+nav ol {
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li {
+    margin: 0 25px;
+    color:white;
+}
+
+nav ol li a {
+    color:white;
+    font-family:Georgia;
+font-weight:bold;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+	
+}
+
+nav ol li i {
+    color:white;
+	
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+.button1 {
+  
+    padding: 16px 20px;
+    text-align: center;
+    width: 60%;
+	background: #e96125;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+	
+	z-index:2;
+}
+
+
+.shopname{
+	
+     background-color:white;
+    background-size: cover;
+	font-size:17px;
+	float:left;
+	
+	 padding: 8px 10px;
+	 border-right: 1px solid #eee;
+	 
+}
+
+.cat
+{
+    font-size:20px;
+	border-top: 1px solid #eee;
+   width:241px;
+}
+.cat:hover{
+ background-color:#F5F5F5;
+  color: black;
+  
+}
+     
+        div.gallery {
+  border: 1px solid #ccc;
+  
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 60%;
+  height: auto;
+  margin-left:60px;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 8 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.default-btn {
+    background-color:#e96125;
+    color: rgb(5, 5, 5);
+    border: 2px solid #000000;
+    padding: 4px 10px;
+
+    font-weight: 200;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.img {
+	max-width: 100px;
+	width: 80%;
+	height: auto;
+    display: block;
+    margin:20px auto;
+	float:left;
+	
+    }
+
+.menu-item-name1 {
+    overflow: hidden;
+
+	position:relative;
+	top:-50px;
+	font-weight:bolder;
+	color:black;
+}
+.removebutton{
+overflow: hidden;
+	padding-left:500px;
+	position:relative;
+	top:-10px;
+
+	font-weight:bolder;
+}	
+

@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+
+  
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="bg1">
+
+	     
+	<div id="login_div" >
+            <div class="container-fluid bg">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+            <div class="form-container">
+                <div class="form-group">
+				<h2 class="resetpass">Reset password</h2>
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text" >We'll never share your email with anyone else.</small>
+                </div>
+            
+                
+                <button type="submit" class="btn btn-success btn-block" onclick="reset()">Reset</button><br>
+				<a href="login.html">Login</a>
+            </div>
+              </div>
+
+              </div>
+            
+           </div>
+</div>
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAN_hZwjs6nprEfL7dN5vN0xTTJGyN-eYo",
+    authDomain: "grocery-5a4ef.firebaseapp.com",
+    databaseURL: "https://grocery-5a4ef-default-rtdb.firebaseio.com",
+    projectId: "grocery-5a4ef",
+    storageBucket: "grocery-5a4ef.appspot.com",
+    messagingSenderId: "107231341618",
+    appId: "1:107231341618:web:6ae138fed374929d4f602b",
+    measurementId: "G-7QCPF69ZHJ"
+  };
+  // Initialize Firebase
+   
+  
+  firebase.initializeApp(firebaseConfig);
+
+
+  firebase.analytics();
+  
+  function reset(){
+     var email=document.getElementById("exampleInputEmail1").value;
+	if(email !="")
+	{
+		firebase.auth().sendPasswordResetEmail(email).then(
+		function()
+		{
+			window.alert("Reset mail is sent to "+ email);
+				window.location.href="login.html";
+		}).catch(function(error)
+		{
+			var errorCode=error.code;
+			var errorMessage=error.message;
+			window.alert("message : " + errorMessage);
+		});
+	}
+}
+</script>
+ 
+
+</body>
+</html>

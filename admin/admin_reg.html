@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		 <link rel="stylesheet" type="text/css" href="Logsigncss.css">
+
+        <!--jQuery library--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Bootstrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+		
+		.container{
+		
+		margin:0px;
+		padding-left:0px;
+		top:2px;
+		position:relative;
+		}
+		.h{
+		
+		 font-size:25px;
+		 font-family:Georgia;
+		 color:grey;
+		 }
+		</style>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		
+
+    </head>
+    <body >
+        <div > <img  src="adminbg.jpg" width="50%" height="100%" align="right" > </div>
+         <div class="bg">
+		 
+         <div class="container">
+            <div class="row row_style">
+                <div class="col-xs-4" style="margin-left:10%" >
+
+                    <h2 class="h"><b>Register Your Shop Here..!</b></h2>
+					<br>
+                    
+                        <div class="form-group">
+
+                            <input type="text"  class="form-control " id="Sname" name="SName" placeholder="Shop Name">
+                            <br>
+                            <input type="text"  class="form-control" name="shopno" id="shopno" placeholder="Shop Number">
+                            <br>
+                            <input type="text"  class="form-control" name="Shopowner" id="Shopowner" placeholder="Shop Owner">
+                            <br>
+                                               
+                            <input type="email" class="form-control"  name="email" id="email" placeholder="Email">
+                             <br>
+							 <input type="text"  class="form-control " id="contact" name="contact" placeholder="Contact Number">
+                            <br>
+							<input type="text"  class="form-control " id="address" name="address" placeholder="Address">
+                            <br>
+							<input type="text"  class="form-control " id="state" name="state" placeholder="State">
+                            <br>
+							<input type="text"  class="form-control " id="city" name="city" placeholder="City">
+                            <br>
+							<input type="text"  class="form-control " id="pincode" name="pincode" placeholder="Pincode">
+                            <br>
+                           
+                            <button class="btn btn-primary" id="addBtn"  onclick="sendEmail()" >Register</button>
+                        </div>
+                    
+
+            </div>
+        </div>
+         </div>
+		 </div>
+         
+
+       <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAN_hZwjs6nprEfL7dN5vN0xTTJGyN-eYo",
+    authDomain: "grocery-5a4ef.firebaseapp.com",
+    databaseURL: "https://grocery-5a4ef-default-rtdb.firebaseio.com",
+    projectId: "grocery-5a4ef",
+    storageBucket: "grocery-5a4ef.appspot.com",
+    messagingSenderId: "107231341618",
+    appId: "1:107231341618:web:6ae138fed374929d4f602b",
+    measurementId: "G-7QCPF69ZHJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+<script src="adminreg.js"></script>
+
+</body>
+</html>

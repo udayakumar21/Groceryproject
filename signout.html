@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+    <html>
+    <head>
+        <title></title>
+               <!-- The core Firebase JS SDK is always required and must be listed first -->
+          <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+          <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    
+    <body>
+       <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAN_hZwjs6nprEfL7dN5vN0xTTJGyN-eYo",
+    authDomain: "grocery-5a4ef.firebaseapp.com",
+    databaseURL: "https://grocery-5a4ef-default-rtdb.firebaseio.com",
+    projectId: "grocery-5a4ef",
+    storageBucket: "grocery-5a4ef.appspot.com",
+    messagingSenderId: "107231341618",
+    appId: "1:107231341618:web:6ae138fed374929d4f602b",
+    measurementId: "G-7QCPF69ZHJ"
+  };
+  // Initialize Firebase
+   
+  
+  firebase.initializeApp(firebaseConfig);
+
+
+  firebase.analytics();
+  
+  const auth = firebase.auth();
+  const logoutBtn = document.querySelector('#out');
+  logoutBtn.addEventListener('click', e => {
+  e.preventDefault();
+  auth.signOut();
+  console.log('User signed out!');
+  alert("User logged out successfully");
+  console.log("Helo");
+  window.location.href="home1.html";
+         });
+	
+
+  </script> 
+    </body>
+</html>

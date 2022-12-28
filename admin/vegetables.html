@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+ <script src="myitems.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/41fbf3ea0f.js" crossorigin="anonymous"></script>
+
+	
+       
+      
+         
+<link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navigation">
+	 <ul>
+	  <li>
+	  <a href="#">
+	    
+	   <span class="icon"></span>
+	   <span class="title" ><h2 id="shopname"></h2></span>
+	 
+	   </a>
+	  </li>
+	  <li>
+	   <a href="admindashboard.html">
+	   <span class="icon"> <i class="fa fa-home" aria-hidden="true"></i></span>
+	   <span class="title">Dashbord</span>
+	   </a>
+	  </li>
+	  <li>
+	  <a href="items.html">
+	    <span class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+	    <span class="title">Add Items</span>
+		</a>
+	  </li>
+	  <li>
+	  <a href="Myitems.html">
+	   <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+	   <span class="title">MyItems</span>
+	   </a>
+	  </li>
+	  
+	  <li>
+	  <a href="allorders.html">
+	   <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+	   <span class="title">Allorders</span>
+	   </a>
+	  </li>
+	  	  <li>
+	  <a href="#">
+	   <span class="icon"> <i class="fas fa-sign-out-alt"></i></span>
+	   <span class="title" onclick="SignOut();">Sign Out</span>
+	   </a>
+	  </li>
+	</ul>
+	</div>
+	</div>
+
+	<div class="main body topbar">
+	    
+		    <div class="topnav" id="myTopnav">
+        
+        <a onclick="getdata0(this.id)" id="personalcare">PersonalCare</a>
+		<a onclick="getdata1(this.id)" id="snaks">Biscuit & snaks</a>	 
+        <a onclick="getdata2(this.id)" id="Households" >Households</a>
+		<a onclick="getdata3(this.id)" id="vegetables">vegtables and fruits</a>
+		<a onclick="getdata4(this.id)" id="Grocery">Grocery</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <div class="toggle1" onclick="toggleMenu();" ></div>
+   
+   </div>
+	     
+	     <div class="search"></div>
+		  <div id = "boxes">
+              <div id= "leftbox">
+        
+			 
+	
+			     <div id="tid1">
+					 
+			    
+			
+
+
+
+            
+     </div> 
+	 
+	 
+			 
+    </div>
+        
+   
+</div>
+<script> 
+  function toggleMenu(){
+  
+   let toggle=document.querySelector('.toggle1');
+   let navigation=document.querySelector('.navigation');
+   let main=document.querySelector('.main');
+   toggle.classList.toggle('active');
+   navigation.classList.toggle('active');
+   main.classList.toggle('active');
+   }
+    function SignOut(){
+
+	   localStorage.removeItem('shopid');
+	   alert("User logged out successfully");
+	   console.log("Logged Out");
+	   window.location.href="adminlogin.html";
+
+	   
+   }
+   
+   function getdata0(id){
+		console.log("id11111"+id);
+       var queryString = "?para1=" + id;
+     window.location.href = "personalcare.html" + queryString;
+	 
+}	 
+ 
+
+	 
+function getdata1(id){
+		console.log("id11111"+id);
+	 var queryString = "?para1=" + id;
+     window.location.href = "snacks.html" + queryString;
+	 
+}	 
+function getdata2(id){
+		console.log("id11111"+id);
+	 var queryString = "?para1=" + id;
+     window.location.href = "households.html" + queryString;
+	 
+}	 
+
+function getdata3(id){
+		console.log("id11111"+id);
+	 var queryString = "?para1=" + id;
+     window.location.href = "vegetables.html" + queryString;
+	 
+}	 
+
+function getdata4(id){
+		console.log("id11111"+id);
+	 var queryString = "?para1=" + id;
+     window.location.href = "grocery.html" + queryString;
+	 
+}	 
+
+
+
+   </script>
+	
+	
+
+</body>
+
+</html>
+
